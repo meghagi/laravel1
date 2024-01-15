@@ -3,9 +3,11 @@
 	<title>Navigation</title>
 	  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </head>
 <body>
  <nav class="navbar navbar-expand bg-dark navbar-dark" id="nav1">
@@ -18,10 +20,10 @@
                 <a class="nav-link ms-3 active" href="{{url('/')}}">Home</a>
             </li>
             <li class="nav-item" id="hm">
-                <a class="nav-link ms-3 active" href="{{url('/customer')}}">Register</a>
+                <a class="nav-link ms-3 active" href="{{url('/cus')}}">Register</a>
             </li>
             <li class="nav-item" id="hm">
-                <a class="nav-link ms-3 active" href="{{url('/customer/view')}}">Manage Admission</a>
+                <a class="nav-link ms-3 active" href="{{url('/customer/view')}}">Customerview</a>
             </li>
             <li class="nav-item" id="hm">
                 <a class="nav-link ms-3 active" href="">Manage Teacher</a>

@@ -61,8 +61,8 @@ Route::get('/demo6/{id}', function(string $id ){
 
 
 })->whereNumber('id');
-Route::get('/demo34/{name}', function($name='ganesh'){
-	$data=compact('name');
+Route::get('/demo34/{name1?}', function($name2='ganesh'){
+	$data=compact('name2');
 	print_r($data);
 	return view('demo3')->with($data);
 });
@@ -74,7 +74,7 @@ Route::resource('/photo',PhotoController::class);
 
 Route::get('/demo9',SingleActionController::class);
 Route::get('/demo12',[RegistrationController:: class,'index']);
-Route::post('/demo12',[RegistrationController:: class,'register']);
+//Route::post('/demo12',[RegistrationController:: class,'register']);
 Route::get('/customer',function(){
 
 $customer=Customers::all();//Customers modelname
@@ -82,9 +82,22 @@ echo"<pre>";
 print_r($customer->toArray());
 
 });
-Route::get('/customer',[Customercontroller::class,'index']);
-Route::post('/customer',[Customercontroller::class,'store']);
+Route::get('/cus/{id}',[Customercontroller::class,'index'])->name('customerroute');
+Route::post('/reg',[Customercontroller::class,'store']);
+Route::get('/customer/view/{id}',[Customercontroller::class,'view']);
+Route::get('/navigation',[Customercontroller::class,'navigateview']);
+Route::get('/customer/delete/{id}',[Customercontroller::class,'delete']);
+Route::get('edit/{id}',[Customercontroller::class,'edit']);
+
+Route::post('update1',[Customercontroller::class,'update1'])->name('update');
+
+
+
+
+/*Route::post('/customer1',[Customercontroller::class,'store']);
 Route::get('/customer/view',[Customercontroller::class,'view']);
 Route::get('/navigation',[Customercontroller::class,'navigateview']);
+Route::get('/customer/delete/{id}',[Customercontroller::class,'delete']);
+*/
 
 
